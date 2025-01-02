@@ -14,9 +14,12 @@ Consociatim Icons (Coicons) is an icon set that became orphaned due to a brand r
 
 The icon set contains:
 
+- demo/.. -- an HTML file for viewing icons and copying snippets (HTML span, CSS content, UTF charachter)
+- SVG/.. -- exported SVG icons
 - TTF/Coicons-Regular.ttf -- the latest TTF version of te icon set
+
 - coicons.birdfont -- the Birdfont file for managing icons and generating the TTF font file
-- demo -- an HTML file for viewing icons and copying snippets (HTML span, CSS content, UTF charachter)
+
 - How-to ontwerpen Coicons.odt -- Dutch styleguide for designing Coicons and instructions for SVG exports and adding it to the Coicons-Regular.ttf font
 - coicons_aff2.afdesign -- old, original icon designs made in Affinity Designer 2
 
