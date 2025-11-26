@@ -5,6 +5,9 @@ packages:
   - 'packages/*'
   - 'proprietary/*'
 
+overrides:
+  form-data@>=4.0.0 <4.0.4: ">=4.0.4"
+
 # Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
 autoInstallPeers: false
 
