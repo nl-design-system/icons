@@ -12,6 +12,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      externalRuntime: false,
       customElementsExportBehavior: 'bundle',
     },
     {
@@ -19,8 +20,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: '@example/web-components-stencil',
-      proxiesFile: '../web-components-react/src/components.ts',
+      outDir: '../web-components-react/src/stencil-generated/',
     }),
   ],
   plugins: [sass()],
