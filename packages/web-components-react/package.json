@@ -25,17 +25,17 @@
     "dist/"
   ],
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "18 || 19",
+    "react-dom": "18 || 19"
   },
   "devDependencies": {
     "@example/web-components-stencil": "workspace:*",
     "@stencil/react-output-target": "1.4.0",
     "@types/node": "22.19.7",
-    "@types/react": "18.3.27",
-    "@types/react-dom": "18.3.7",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
     "rimraf": "6.1.2",
     "typescript": "5.9.3"
   }

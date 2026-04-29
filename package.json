@@ -35,6 +35,7 @@
     "eslint-plugin-json": "3.1.0",
     "eslint-plugin-mdx": "3.6.2",
     "eslint-plugin-react": "7.37.5",
+    "http-server": "14.1.1",
     "husky": "9.1.7",
     "lint-staged": "15.5.2",
     "markdownlint-cli": "0.47.0",
@@ -67,7 +68,7 @@
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
-    "start": "node_modules/http-server/bin packages/storybook/dist/",
+    "start": "http-server ./packages/storybook/dist/",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "pnpm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
@@ -77,9 +78,6 @@
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
     "watch:storybook": "lerna run build:stencil && lerna run build:style-dictionary && pnpm --filter ./packages/storybook run storybook",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
-  },
-  "dependencies": {
-    "http-server": "14.1.1"
   },
   "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
 }
