@@ -1,0 +1,392 @@
+<html>
+<head>
+
+    <title>Consociatim icons v.2025010201</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet"/>
+
+    <style>
+    body {
+    
+    	  --col-grey: #e5e5e5;
+    	  --col-lemon: #FFD500;
+    	  --col-dark: #505050;
+    	  --col-darkest: #000;
+    	  --col-lightest: #FFF;
+    	  
+    	  --border-light: 2px solid var(--col-grey);
+    	  --border-dark: 2px solid var(--col-darkest); }
+    
+        @font-face {
+            font-family: 'Coicons';
+            src: url('Coicons-Regular.ttf?v=2025010201') format('truetype'); }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: var(--col-dark); }
+        
+
+        .utfcode,
+        .classname {
+            font-family: "Roboto Condensed";
+            display: block;
+            clear: both;
+            height: 35px;
+            margin: .5rem 0 0 0;
+            color: #d1d1d1;
+            line-height: 1; }
+
+        a {
+            text-decoration: none;  }
+
+        .copylink {
+            color: transparent;
+            display: inline-block;
+            position: absolute;
+            right: 2px;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;  }
+
+        .copylink  { top: 3px;  }
+        .copylink  + .copylink  { top: 23px; }
+        .copylink  + .copylink + .copylink  { top: 43px; }
+
+
+        .copylink::after {
+            border-radius: 4px;
+            font-family: "Roboto condensed", sans-serif;
+            content: attr(data-title); /* <= dynamically title content */
+            position: absolute;
+            z-index: 1;
+            left: 20px;
+            color: var(--col-lightest);
+            background: var(--col-dark);
+            box-shadow: 2px 2px 2px #50505050;
+            transition: opacity .5s ease-in-out;
+            text-align: left;
+            font-weight:normal;
+            padding: 0;
+			max-width: 0;
+			overflow:hidden; }
+
+
+			.copylink::before {
+				content:"";
+				border:10px; }
+
+        .copylink:hover::after {
+        		overflow:visible;
+            padding: 5px;
+				max-width: 1000px; }
+
+
+        li:hover .copylink:hover {
+            background: var(--col-lightest);
+            color: var(--col-darkest);
+            font-weight: bold; }
+
+
+        li:hover .copylink:active {
+            background: rgba(255,255,255,.65);
+            font-weight:normal; }
+
+
+        li:hover .utfcode,
+        li:hover .classname {
+            color: var(--col-dark); }
+
+        li:hover .copylink {
+            background: var(--col-dark);
+            color: var(--col-lightest); }
+
+        li:hover .ci {
+            color:var(--col-dark);
+     /*      outline: 1px dotted rgba(255,255,255,.8); // for debugging font display */
+        }
+
+        h1 {
+            font-family: 'Bree Serif', serif;
+            font-weight:300;
+            font-size:32px; }
+
+        ul {
+            padding:0; }
+
+        li {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 10px 5px 0 5px;
+            border-radius:8px;
+            margin: 0 8px 8px 0;
+            text-align: center;
+        	border: var(--border-light);
+            transition: all .25s ease-in-out; }
+
+        li:hover {
+            border-color: var(--col-lemon);
+            background: var(--col-lemon); }
+
+        .hidden {
+            display: inline-block;
+            width:0px;
+            height:0px;
+            overflow: hidden; }
+
+        .coicons-container {
+            max-width: 855px;
+            margin: 18px auto; }
+
+        .ci {
+            font-family: 'Coicons',apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+            font-weight: normal;
+            line-height: normal;
+            position: relative;
+            display: inline-block;
+            /* width: 50px;
+             height:50px; */
+        }
+
+			li .ci {
+			font-size: 44px; }
+
+        .ci::after {
+            display: inline-block; }
+        
+        
+        table {
+        	border-spacing: 1rem;
+        	text-align: left;
+        	border-radius: 8px;
+			border: var(--border-light);
+			width: 100%; }
+        
+        td {
+        	vertical-align: top; }
+        
+        caption {
+       	 text-align:left; }
+        
+    </style>
+
+    <script>
+
+        var coicons = [
+            ["ci-archive","1F5C4"],
+            ["ci-arrow-right","27A1"],
+            ["ci-arrow-up","2B06"],
+            ["ci-arrow-divert","1F500"],
+            ["ci-arrow-diagonal-check","1F855"],
+            ["ci-arrow-down","2B07"],
+            ["ci-arrow-left","2B05"],
+            ["ci-asterisk","002A"],
+            ["ci-bankcard","1F4B3","2022-06-01"],
+            ["ci-bell","1F56D"],
+            ["ci-briefcase","1F4BC"],
+            ["ci-cart","1F6D2"],
+            ["ci-calendar","1F4C5"],
+            ["ci-calculator","1F5A9"],
+            ["ci-chart-down","1F4C9"],
+            ["ci-chart-up","1F4C8"],
+            ["ci-check","2714"],
+            ["ci-check-sm","1F5F8"],
+            ["ci-chicken","1F414"],
+            ["ci-chicken-head","1F413"],
+            ["ci-chevron-double-left","226A"],
+            ["ci-chevron-double-right","226B"],
+            ["ci-chevron-left","23F4"],
+            ["ci-chevron-right","23F5"],
+            ["ci-chevron-up","23F6"],
+            ["ci-chevron-down","23F7"],
+            ["ci-clock","1F553"],
+            ["ci-cog","2699"],
+            ["ci-cog-window","26ED"],
+            ["ci-collapsed","2630"],
+            ["ci-deceased","271D"],
+            ["ci-directionsign","E015"],
+            ["ci-disk","1F4BE"],
+            ["ci-document","1F5CF"],
+            ["ci-documents","1F4DA"],
+            ["ci-document-check","1F197"],
+            ["ci-document-view","1F4C3"],
+            ["ci-download","1F4E5"],
+            ["ci-electric-plug","1F50C"],
+            ["ci-email","0040"],
+            ["ci-envelope","2709"],
+            ["ci-erase-left","232B"],
+            ["ci-export","2934"],
+            ["ci-expanded","2637"],
+            ["ci-eye","1F441"],
+            ["ci-eye-closed","1F440"],
+            ["ci-ellipsis","2026"],
+            ["ci-ellipsis-midline","22EF"],
+            ["ci-filter","2697"],
+            ["ci-file-cabinet","1F5C4"],
+            ["ci-flag","2691"],
+            ["ci-flag-checkered","1F3C1"],
+            ["ci-folder","1F4C2"],
+            ["ci-folder-stock","1F5C3"],
+            ["ci-form","1F4DC"],
+            ["ci-gauge","E010"],
+            ["ci-goal","1F78B"],
+            ["ci-globe","1F310"],
+            ["ci-hashtag","0023"],
+            ["ci-hammerandwrench","1F6E0"],
+            ["ci-history","1F3DB"],
+            ["ci-hourglass","231B"],
+            ["ci-house","1F3E0"],
+            ["ci-import","2935"],
+            ["ci-info","1F6C8"],
+            ["ci-lemon","1F34B"],
+            ["ci-lightning","26A1"],
+            ["ci-link","1F517"],
+            ["ci-list","2980"],
+            ["ci-list-horizontal","22EE","2022-06-01"],
+            ["ci-map-marker","1F6A9"],
+            ["ci-minus-sign","002D"],
+            ["ci-network","E012"],
+            ["ci-network-disconnected","E011"],
+            ["ci-notes","1F5D2"],
+            ["ci-off","23CF"],
+            ["ci-office","1F3E2"],
+            ["ci-padlock-closed","1F512"],
+            ["ci-padlock-open","1F513"],
+            ["ci-palmtree","1F3DD"],
+            ["ci-pencil","270F"],
+            ["ci-pencil-group","2710"],
+            ["ci-people-group","1F46A"],
+            ["ci-people-person","1F464"],
+            ["ci-people-person-anonymous","E013"],
+            ["ci-people-person-anonymous-not","E014"],
+            ["ci-people-person-data","1F5C2"],
+            ["ci-people-person-running","1F3C3"],
+            ["ci-people-person-questionmark","1F47B"],
+            ["ci-people-professional","1F9D1"],
+            ["ci-people-professional-co","1F9D9"],
+            ["ci-people-protected","1F6E1","2023-01-06"],
+            ["ci-people-support","E017"],
+            ["ci-phone","1F4F1"],
+            ["ci-plus-sign","002B"],
+            ["ci-printer","1F5A8"],
+            ["ci-prohibited","1F6AB"],
+            ["ci-pushpin","1F4CC"],
+            ["ci-pushpin-round","1F4CD"],
+            ["ci-puzzle","01F9E9"],
+            ["ci-questionmark","2753"],
+            ["ci-remove","274C"],
+            ["ci-multiply","00D7"],
+            ["ci-reset","1F503"],
+            ["ci-reorder","E016"],
+            ["ci-report","1F4CA"],
+            ["ci-restart","27F2"],
+   	    	["ci-ribbon","1F397"],
+   	   	    ["ci-rocket","1F680"],
+            ["ci-rosette","1f393"],
+            ["ci-school","1F3EB"],
+            ["ci-search","1F50E"],
+            ["ci-share","27A6"],
+            ["ci-speechbubble","1F4AC"],
+            ["ci-star","2605"],
+            ["ci-step","1F463"],
+            ["ci-stop","1F6D1"],
+            ["ci-table-columns","25A5"],
+            ["ci-table-rows","25A4"],
+            ["ci-thermometer","1F321"],
+            ["ci-tiles","1F9EE"],
+            ["ci-todo","1F4CB"],
+            ["ci-transport-minibus","1F690"],
+            ["ci-trash","1F5D1"],
+            ["ci-triangle-up","2BC5"],
+            ["ci-triangle-down","2BC6"],
+            ["ci-triangle-left","2BC7"],
+            ["ci-triangle-right","2BC8"],
+            ["ci-upload","1F4E4"],
+            ["ci-upload-download","21f3"],
+            ["ci-user","1F464"],
+            ["ci-vbar","2758"],
+            ["ci-view","1F50E"],
+            ["ci-warning","26A0"],
+            ["ci-window-maximize","23EB"],
+            ["ci-window-minimize","23EC"],
+            ["ci-window-new","279A"]
+        ];
+
+        function copyToClip(copyThis) {
+            var copyText = document.getElementById(copyThis);
+            copyText.select();
+            document.execCommand("copy");
+        }
+
+        function printIcons() {
+            
+            document.write("<style>");
+
+            for (var i = 0, l1 = coicons.length; i < l1; i++) {
+                document.write('.' + coicons[i][0] + '::after  { content: "\\' + coicons[i][1] + '"; }');
+            }
+            document.write("</style>");
+
+
+            // Coicons list
+            document.write("<ul>");
+
+            for (var i = 0, l1 = coicons.length; i < l1; i++) {
+
+                document.write('<li>');
+                document.write('<span class="ci">'+String.fromCodePoint('0x'+coicons[i][1])+'</span>');
+                document.write('<span class="classname">.' + coicons[i][0] + '</span>');
+                //      document.write('<span class="utfcode">' + coicons[i][1] + '</span>');
+                document.write('<a href="# <span class=&quot;ci ' + coicons[i][0] + '&quot;></span>" class="copylink" data-title="Copy html snippet" onclick="copyToClip(\'htmlSnip' + i + '\')">h</a>');
+                document.write('<a href="# content:&quot;\\' + coicons[i][1] + '&quot;;" class="copylink" data-title="Copy CSS content rule" onclick="copyToClip(\'cssSnip' + i + '\')">c</a>');
+                document.write('<a href="# '+String.fromCodePoint('0x'+coicons[i][1])+'" class="copylink" data-title="Copy icon character" onclick="copyToClip(\'utfSnip' + i + '\')">i</a>');
+                document.write('<span class="hidden">');
+                document.write('<input id="htmlSnip' + i + '" type="text" value="<span class=&quot;ci ' + coicons[i][0] + '&quot;></span>">');
+                document.write('<input id="cssSnip' + i + '" type="text" value="content:&quot;\\' + coicons[i][1] + '&quot;;">');
+                document.write('<input id="utfSnip' + i + '" type="text" value="'+String.fromCodePoint('0x'+coicons[i][1])+'">');
+                document.write('</span>');
+                document.write('</li>');
+            }
+            document.write("</ul>");
+
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="coicons-container">
+        <h1>Coicons demo and snippet copy</h1>
+        <p>Consociatim icons (Coicons) is an icon set that became orphaned due to a brand redesign of a Dutch social domain enterprise application suite. It was decided to donate the set to NL Design System for public use.</p>
+        <p>
+        	<span class="ci ci-info"></span>
+            Hover an icon to see the html and CSS snippet copy links
+        </p>
+        <p>
+        	<span class="ci ci-download"></span>
+            Download latest version of the Consociatim icons font: <a href="https://github.com/nl-design-system/icons/tree/main/packages/consociatim-icons/ttf/Coicons-Regular.ttf?v=2025010201" title="Consociatim icons v.2025010201">Coicons-Regular.ttf v.2025010201</a>
+        </p>
+        <script>
+            printIcons();
+        </script>
+
+        
+        <table>
+	        <caption>
+	        	Version information
+	        </caption>
+	        <tr>
+		        <th>version</th>
+		        <th>changes</th>
+	        </tr>
+	        <tr>
+		        <td>2025010201</td>
+		        <td>Removed old brand logos and brand references in filenames and code for icon-set donation to NL Design System</td>
+	        </tr>
+	</table>
+</div>
+
+</body>
+</html>
