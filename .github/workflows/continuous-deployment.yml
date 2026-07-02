@@ -6,9 +6,13 @@ on:
       - main
   pull_request:
 
+permissions: {}
+
 jobs:
   install:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout branch
@@ -38,6 +42,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout branch
@@ -68,6 +74,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout branch
@@ -118,6 +126,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout branch
@@ -149,14 +159,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy-pages.outputs.page_url }}
-
     permissions:
       pages: write
       id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
@@ -168,6 +176,8 @@ jobs:
     environment: publish
     needs: [lint, test]
     if: github.ref == 'refs/heads/main' && github.repository != 'nl-design-system/example'
+    permissions:
+      id-token: write
 
     steps:
       - name: Checkout release branch
