@@ -1,17 +1,17 @@
 packages:
-  - "components/**"
-  - "packages/*"
-  - "proprietary/*"
+  - 'components/**'
+  - 'packages/*'
+  - 'proprietary/*'
 
 allowBuilds:
-  "@parcel/watcher": true
+  '@parcel/watcher': true
   esbuild: true
   sharp: true
 
 overrides:
-  form-data@>=4.0.0 <4.0.4: ">=4.0.4"
-  handlebars@>=4.0.0 <4.7.9: ">=4.7.9"
-  shell-quote@>=1.1.0 <=1.8.3: ">=1.8.4"
+  form-data@>=4.0.0 <4.0.4: '>=4.0.4'
+  handlebars@>=4.0.0 <4.7.9: '>=4.7.9'
+  shell-quote@>=1.1.0 <=1.8.3: '>=1.8.4'
   tar@<=7.5.18: ^7.5.19
 
 # Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
@@ -28,21 +28,21 @@ minimumReleaseAge: 1440
 
 # Make an exception for trusted packages, notably our own
 minimumReleaseAgeExclude:
-  - "@amsterdam/*"
-  - "@gemeente-denhaag/*"
-  - "@gemeente-rotterdam/*"
-  - "@nl-design-system/*"
-  - "@nl-design-system-candidate/*"
-  - "@nl-design-system-community/*"
-  - "@nl-design-system-unstable/*"
-  - "@nl-rvo/*"
-  - "@rijkshuisstijl-community/*"
-  - "@utrecht/*"
+  - '@amsterdam/*'
+  - '@gemeente-denhaag/*'
+  - '@gemeente-rotterdam/*'
+  - '@nl-design-system/*'
+  - '@nl-design-system-candidate/*'
+  - '@nl-design-system-community/*'
+  - '@nl-design-system-unstable/*'
+  - '@nl-rvo/*'
+  - '@rijkshuisstijl-community/*'
+  - '@utrecht/*'
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
 saveExact: true
-savePrefix: ""
+savePrefix: ''
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
