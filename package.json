@@ -22,10 +22,6 @@
     "./proprietary/*"
   ],
   "devDependencies": {
-    "@lerna-lite/cli": "3.12.3",
-    "@lerna-lite/publish": "3.12.3",
-    "@lerna-lite/run": "3.12.3",
-    "@lerna-lite/version": "3.12.3",
     "@types/node": "24.10.9",
     "@typescript-eslint/eslint-plugin": "8.54.0",
     "@typescript-eslint/parser": "8.54.0",
@@ -51,8 +47,8 @@
     "typescript": "5.9.3"
   },
   "scripts": {
-    "build": "lerna run build",
-    "clean": "lerna run clean",
+    "build": "pnpm --recursive run build",
+    "clean": "pnpm --recursive run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --report-unused-disable-directives .",
@@ -63,22 +59,21 @@
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
-    "lint-workspaces": "lerna run --no-bail lint",
-    "lint-build": "lerna run --no-bail lint-build",
+    "lint-workspaces": "pnpm --recursive --if-present run lint",
+    "lint-build": "pnpm --recursive --if-present run lint-build",
     "prepare": "husky",
     "prettier": "prettier --write .",
-    "publish": "lerna publish from-package --yes",
-    "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
+    "publish": "pnpm --recursive publish --access public --no-git-checks",
     "start": "http-server ./packages/storybook/dist/",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "pnpm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
-    "test-workspaces": "lerna run --no-bail test",
+    "test-workspaces": "pnpm --recursive --if-present run test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.mjs",
-    "watch:storybook": "lerna run build:stencil && lerna run build:style-dictionary && pnpm --filter ./packages/storybook run storybook",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "watch:storybook": "pnpm --filter @example/web-components-stencil run build:stencil && pnpm --filter @example/design-tokens run build:style-dictionary && pnpm --filter ./packages/storybook run storybook",
+    "watch:style-dictionary": "pnpm --filter @example/design-tokens run watch:style-dictionary"
   },
   "packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065"
 }
