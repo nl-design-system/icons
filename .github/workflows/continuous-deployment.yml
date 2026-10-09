@@ -177,6 +177,7 @@ jobs:
     needs: [lint, test]
     if: github.ref == 'refs/heads/main' && github.repository != 'nl-design-system/example'
     permissions:
+      contents: read
       id-token: write
 
     steps:
@@ -194,6 +195,8 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
+          # pass explicitly for changesets/action authentication with NODE_AUTH_TOKEN
+          registry-url: https://registry.npmjs.org
 
       - name: "Continuous Deployment: install"
         run: |
@@ -203,10 +206,16 @@ jobs:
       - name: "Continuous Deployment: build"
         run: pnpm run --if-present build
 
-      - name: "Continuous Deployment: publish to npm"
+      - name: Publish to npm Registry
+        uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          pnpm run publish
-          pnpm config delete "//registry.npmjs.org/:_authToken"
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GIT_AUTHOR_NAME: "NL Design System"
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          GIT_COMMITTER_NAME: "NL Design System"
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          commit-message: "docs(release): design system packages"
+          pr-title: "docs(release): design system packages"
+          publish-script: "pnpm run changeset:publish"
