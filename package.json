@@ -76,7 +76,7 @@
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.mjs",
-    "watch:storybook": "pnpm --filter @example/web-components-stencil run build:stencil && pnpm --filter @example/design-tokens run build:style-dictionary && pnpm --filter ./packages/storybook run storybook",
+    "watch:storybook": "pnpm --filter @example/web-components-stencil run build && pnpm --filter @example/design-tokens run build && pnpm --filter ./packages/storybook run storybook",
     "watch:style-dictionary": "pnpm --filter @example/design-tokens run watch:style-dictionary"
   },
   "packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065"
