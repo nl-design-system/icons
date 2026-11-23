@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import readme from '@example/components-css/button/README.md?raw';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren } from 'react';
 import '@example/components-css/button/index.scss';
 

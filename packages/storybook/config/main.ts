@@ -1,26 +1,22 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
-    '@storybook/addon-viewport',
     '@whitespace/storybook-addon-html',
     '@etchteam/storybook-addon-status',
   ],
-  framework: {
-    name: '@storybook/react-vite',
-    options: {},
-  },
   core: {
     disableTelemetry: true,
     disableWhatsNewNotifications: true,
   },
-  docs: {
-    autodocs: 'tag',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
   },
   staticDirs: ['../../../proprietary/assets/src'],
+  stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
 };
 
 export default config;

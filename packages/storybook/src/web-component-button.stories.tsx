@@ -2,7 +2,7 @@
 
 import readme from '@example/components-css/button/README.md?raw';
 import { ExampleButton } from '@example/web-components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren } from 'react';
 
 const Button = ({ children }: PropsWithChildren<{}>) => <ExampleButton>{children}</ExampleButton>;
